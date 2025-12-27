@@ -55,8 +55,27 @@ const Admission = () => {
   };
 
   return (
-    <Layout title="Admission - Delhi Public School Sursand">
-      <PageHero title="Admission" breadcrumb="Admission" />
+    <Layout title="Admission - Delhi Public School Suriya">
+      <PageHero title="Admission 2026-27" breadcrumb="Admission" />
+
+      {/* Admission Info Banner */}
+      <section className="py-12 bg-secondary text-secondary-foreground">
+        <div className="container-custom text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
+              School Admission Open for Session 2026-27
+            </h2>
+            <p className="text-lg opacity-90 max-w-2xl mx-auto">
+              Admissions open for Play to Class IX. Register now to secure your child's future with quality CBSE education at Delhi Public School Suriya.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Admission Process */}
       <section className="py-20">
@@ -64,7 +83,7 @@ const Admission = () => {
           <SectionHeading
             subtitle="Admission Process"
             title="How to Apply"
-            description="Follow these simple steps to apply for admission at DPS Sursand."
+            description="Follow these simple steps to apply for admission at DPS Suriya."
             center
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -118,10 +137,10 @@ const Admission = () => {
                     </li>
                   ))}
                 </ul>
-                <Button className="mt-8 bg-secondary hover:bg-teal-dark text-secondary-foreground">
-                  <Download className="mr-2 w-4 h-4" />
-                  Download Application Form
-                </Button>
+                <div className="mt-8 p-4 bg-secondary/10 rounded-lg">
+                  <p className="text-sm text-foreground font-medium mb-2">Classes Offered:</p>
+                  <p className="text-muted-foreground">Play, Nursery, LKG, UKG, Class I to IX</p>
+                </div>
               </div>
             </motion.div>
 
@@ -181,7 +200,7 @@ const Admission = () => {
         </div>
       </section>
 
-      {/* Fee Structure CTA */}
+      {/* Contact CTA */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container-custom text-center">
           <motion.div
@@ -191,14 +210,17 @@ const Admission = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-2xl md:text-3xl font-display font-bold mb-4">
-              Need More Information?
+              For More Details Contact
             </h2>
-            <p className="text-primary-foreground/80 mb-6 max-w-xl mx-auto">
-              Contact our admission office for fee structure, scholarship details, and any other queries.
+            <p className="text-primary-foreground/80 mb-2 text-lg">
+              +91 8292065084, 8292591939
             </p>
-            <Button size="lg" className="bg-secondary hover:bg-teal-dark text-secondary-foreground">
-              Contact Admission Office
-            </Button>
+            <p className="text-primary-foreground/80 mb-6">
+              dpssuriyanawadih@gmail.com
+            </p>
+            <p className="text-primary-foreground/60 max-w-xl mx-auto">
+              Rajdhanwar Road, Suriya, Near Nawadih Panchayat Bhawan, Giridih - (825320)
+            </p>
           </motion.div>
         </div>
       </section>

@@ -11,24 +11,24 @@ const subjects = [
   { icon: Globe, name: 'Social Studies', description: 'History, Geography, Civics' },
   { icon: Code, name: 'Computer Science', description: 'Programming & IT Skills' },
   { icon: Palette, name: 'Art & Craft', description: 'Creative Expression' },
-  { icon: Music, name: 'Music', description: 'Vocal & Instrumental' },
-  { icon: Dumbbell, name: 'Physical Education', description: 'Sports & Fitness' },
+  { icon: Music, name: 'Music & Dance', description: 'Vocal, Instrumental & Dance' },
+  { icon: Dumbbell, name: 'Physical Education', description: 'Sports, Yoga & Fitness' },
 ];
 
 const activities = [
+  'Dance & Music Classes',
+  'Art & Craft Classes',
+  'Yoga Classes',
+  'Visual & Performing Arts',
   'Annual Sports Day',
-  'Science Exhibition',
   'Cultural Programs',
-  'Debate Competitions',
-  'Art & Drawing Competitions',
-  'Quiz Competitions',
   'Educational Tours',
-  'Yoga & Meditation',
+  'Debate Competitions',
 ];
 
 const Academic = () => {
   return (
-    <Layout title="Academic - Delhi Public School Sursand">
+    <Layout title="Academic - Delhi Public School Suriya">
       <PageHero title="Academic" breadcrumb="Academic" />
 
       {/* Curriculum */}
@@ -37,7 +37,7 @@ const Academic = () => {
           <SectionHeading
             subtitle="Curriculum"
             title="CBSE Affiliated Curriculum"
-            description="We follow the CBSE curriculum with a focus on holistic development and practical learning."
+            description="We follow the CBSE curriculum with a focus on holistic development, innovative teaching methods, and practical learning in an English medium environment."
             center
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -66,17 +66,17 @@ const Academic = () => {
         <div className="container-custom">
           <SectionHeading
             subtitle="Classes"
-            title="Classes We Offer"
+            title="Classes We Offer (Play to IXth)"
             center
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
-              { level: 'Pre-Primary', classes: 'Nursery, LKG, UKG', description: 'Foundation years with play-based learning.' },
-              { level: 'Primary', classes: 'Class 1 to 5', description: 'Building strong fundamentals in all subjects.' },
-              { level: 'Middle School', classes: 'Class 6 to 8', description: 'Comprehensive curriculum with specialized subjects.' },
-              { level: 'Secondary', classes: 'Class 9 & 10', description: 'Board examination preparation with CBSE curriculum.' },
-              { level: 'Senior Secondary', classes: 'Class 11 & 12', description: 'Science, Commerce & Humanities streams.' },
-              { level: 'Special Programs', classes: 'Remedial Classes', description: 'Extra support for students who need it.' },
+              { level: 'Pre-Primary', classes: 'Play, Nursery, LKG, UKG', description: 'Foundation years with play-based learning in English environment.' },
+              { level: 'Primary', classes: 'Class I to V', description: 'Building strong fundamentals with experienced faculty.' },
+              { level: 'Middle School', classes: 'Class VI to VIII', description: 'Comprehensive CBSE curriculum with innovative teaching methods.' },
+              { level: 'Secondary', classes: 'Class IX', description: 'Board examination preparation with focused academic guidance.' },
+              { level: 'Extra Support', classes: 'Remedial Classes', description: 'Extra classes for weak students to help them improve.' },
+              { level: 'Computer Lab', classes: 'All Classes', description: 'Modern computer education for digital skill development.' },
             ].map((item, index) => (
               <motion.div
                 key={item.level}
@@ -112,7 +112,7 @@ const Academic = () => {
                 title="Activities & Programs"
               />
               <p className="text-muted-foreground leading-relaxed mb-6">
-                We believe in the holistic development of students. Our co-curricular activities are designed to bring out the best in every child and help them discover their talents.
+                We believe in the holistic development of students. Our co-curricular activities including Visual & Performing Arts, Dance & Music Classes, Yoga Classes, and Art & Craft are designed to bring out the best in every child.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {activities.map((activity, index) => (
@@ -137,19 +137,19 @@ const Academic = () => {
               viewport={{ once: true }}
               className="bg-secondary/10 rounded-2xl p-8"
             >
-              <h3 className="font-display font-bold text-2xl text-foreground mb-6">Academic Calendar Highlights</h3>
+              <h3 className="font-display font-bold text-2xl text-foreground mb-6">Why Choose DPS Suriya?</h3>
               <div className="space-y-4">
                 {[
-                  { month: 'April', event: 'New Session Begins' },
-                  { month: 'August', event: 'Independence Day Celebration' },
-                  { month: 'September', event: 'Half Yearly Examinations' },
-                  { month: 'November', event: 'Annual Sports Day' },
-                  { month: 'December', event: 'Annual Function' },
-                  { month: 'March', event: 'Annual Examinations' },
+                  { feature: 'Experienced Faculty', detail: 'Qualified & dedicated teachers' },
+                  { feature: 'English Environment', detail: 'Complete English medium education' },
+                  { feature: 'Innovative Methods', detail: 'Modern teaching techniques' },
+                  { feature: 'CCTV Security', detail: 'Safe & secure campus' },
+                  { feature: 'Transportation', detail: 'Reliable transport facilities' },
+                  { feature: 'Spacious Playground', detail: 'Sports & physical activities' },
                 ].map((item, index) => (
                   <div key={index} className="flex items-center justify-between border-b border-border/50 pb-3">
-                    <span className="font-semibold text-secondary">{item.month}</span>
-                    <span className="text-muted-foreground">{item.event}</span>
+                    <span className="font-semibold text-secondary">{item.feature}</span>
+                    <span className="text-muted-foreground text-sm">{item.detail}</span>
                   </div>
                 ))}
               </div>

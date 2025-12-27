@@ -6,15 +6,30 @@ import SectionHeading from '@/components/ui/SectionHeading';
 import aboutImage from '@/assets/about-school.jpg';
 
 const values = [
-  { icon: BookOpen, title: 'Quality Education', description: 'Comprehensive curriculum designed for holistic development.' },
+  { icon: BookOpen, title: 'Quality Education', description: 'CBSE curriculum designed for holistic development.' },
   { icon: Users, title: 'Student-Centered', description: 'Every child is unique and receives personalized attention.' },
-  { icon: Target, title: 'Excellence', description: 'Striving for excellence in academics, sports, and co-curricular activities.' },
+  { icon: Target, title: 'Excellence', description: 'Striving for excellence in academics and co-curricular activities.' },
   { icon: Award, title: 'Character Building', description: 'Developing ethical values and strong moral character.' },
+];
+
+const whyChooseUs = [
+  'Experienced Faculty',
+  'Innovative Teaching Methods',
+  'Visual & Performing Arts',
+  'English Environment',
+  'Dance & Music Classes',
+  'Art & Craft Classes',
+  'Yoga Classes',
+  'Computer Lab',
+  'CCTV Camera Security',
+  'Spacious Playground',
+  'Extra Classes for weak students',
+  'Transportation Facilities',
 ];
 
 const About = () => {
   return (
-    <Layout title="About Us - Delhi Public School Sursand">
+    <Layout title="About Us - Delhi Public School Suriya">
       <PageHero title="About Us" breadcrumb="About Us" />
 
       {/* Main Content */}
@@ -29,13 +44,16 @@ const About = () => {
             >
               <SectionHeading
                 subtitle="About School"
-                title="Welcome to Delhi Public School Sursand"
+                title="Welcome to Delhi Public School Suriya"
               />
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Delhi Public School Sursand provides best education to children. Our purpose is to nurture the unique potential of every student entrusted in our care. We aim to offer a liberal and enlightened environment in education to keep pace with dynamic trends.
+                Delhi Public School Suriya is an English Medium School under the guideline of CBSE, established in 2025. We are located at Rajdhanwar Road, Suriya, Near Nawadih Panchayat Bhawan, Giridih - 825320.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                We at "Delhi Public School Sursand" are committed towards meeting the challenges of the modern era, dovetailing much of the ethos of the new post-independence India into its educational program and philosophy.
+                Our purpose is to nurture the unique potential of every student entrusted in our care. We aim to offer a liberal and enlightened environment in education to keep pace with dynamic trends.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                We provide comprehensive education from Play to Class IX with experienced faculty, innovative teaching methods, and modern facilities to ensure holistic development of students.
               </p>
               <blockquote className="border-l-4 border-secondary pl-6 my-8 italic text-foreground">
                 "Educating the mind without educating the heart is no education at all. Actions speak louder than words."
@@ -53,6 +71,10 @@ const About = () => {
                 alt="Students in classroom"
                 className="rounded-2xl shadow-school-lg w-full h-[400px] object-cover"
               />
+              <div className="absolute -bottom-6 -left-6 bg-secondary text-secondary-foreground p-6 rounded-xl shadow-lg hidden md:block">
+                <div className="text-3xl font-display font-bold">Estd: 2025</div>
+                <div className="text-sm">CBSE Affiliated</div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -89,7 +111,7 @@ const About = () => {
               </div>
               <h3 className="font-display font-bold text-2xl text-foreground mb-4">Our Mission</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To provide holistic education that fosters intellectual curiosity, creativity, and character development while maintaining high academic standards and promoting cultural values.
+                To provide holistic education in an English medium environment that fosters intellectual curiosity, creativity, and character development while maintaining high academic standards.
               </p>
             </motion.div>
           </div>
@@ -130,21 +152,12 @@ const About = () => {
         <div className="container-custom">
           <SectionHeading
             subtitle="Why Choose Us"
-            title="Real Understanding Through an Integrated Approach"
+            title="Why to Choose Us?"
             light
             center
           />
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {[
-              'CBSE affiliated curriculum',
-              'Experienced and qualified faculty',
-              'Modern infrastructure and facilities',
-              'Safe and secure environment',
-              'Focus on holistic development',
-              'Regular parent-teacher interaction',
-              'Sports and co-curricular activities',
-              'Technology-enabled learning',
-            ].map((item, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {whyChooseUs.map((item, index) => (
               <motion.div
                 key={item}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}

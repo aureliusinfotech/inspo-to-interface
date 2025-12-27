@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Building2, Shield, BookOpen, Users, Trophy, Bus, ArrowRight, GraduationCap, Heart } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Building2, Shield, BookOpen, Users, Trophy, Bus, ArrowRight, GraduationCap, Heart, Music, Palette, Dumbbell, Monitor, Sparkles } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import SectionHeading from '@/components/ui/SectionHeading';
 import FacilityCard from '@/components/ui/FacilityCard';
@@ -13,56 +13,71 @@ import aboutImage from '@/assets/about-school.jpg';
 const heroSlides = [
   {
     image: heroImage,
-    title: 'Welcome to Delhi Public School Sursand',
-    subtitle: 'Nurturing Excellence, Shaping Futures',
+    title: 'Welcome to Delhi Public School Suriya',
+    subtitle: 'An English Medium School Under the Guideline of CBSE',
   },
 ];
 
 const facilities = [
   {
-    icon: Building2,
-    title: 'Modern Building',
-    description: 'Architecturally well designed building with spacious classrooms and modern amenities.',
+    icon: Users,
+    title: 'Experienced Faculty',
+    description: 'Highly qualified and experienced teachers dedicated to student success with innovative teaching methods.',
+  },
+  {
+    icon: Monitor,
+    title: 'Computer Lab',
+    description: 'Modern computer lab equipped with latest technology for digital learning and skill development.',
   },
   {
     icon: Shield,
-    title: 'Security',
-    description: 'We focused on student security with CCTV cameras and trained security guards.',
+    title: 'CCTV Security',
+    description: 'Complete CCTV camera surveillance for student safety and security throughout the campus.',
   },
   {
-    icon: BookOpen,
-    title: 'E-Learning',
-    description: 'We provide facility of e-Learning with safe and interactive digital classrooms.',
-  },
-  {
-    icon: Users,
-    title: 'Expert Faculty',
-    description: 'Highly qualified and experienced teachers dedicated to student success.',
-  },
-  {
-    icon: Trophy,
-    title: 'Sports',
-    description: 'Comprehensive sports facilities for physical development and team spirit.',
+    icon: Dumbbell,
+    title: 'Spacious Playground',
+    description: 'Large playground for sports activities and physical development of students.',
   },
   {
     icon: Bus,
-    title: 'Transport',
-    description: 'Safe and reliable transport service covering all major routes.',
+    title: 'Transportation',
+    description: 'Safe and reliable transport facilities covering all major routes in the region.',
   },
+  {
+    icon: Sparkles,
+    title: 'Extra Classes',
+    description: 'Special attention and extra classes for weak students to help them improve.',
+  },
+];
+
+const whyChooseUs = [
+  'Experienced Faculty',
+  'Innovative Teaching Methods',
+  'Visual & Performing Arts',
+  'English Environment',
+  'Dance & Music Classes',
+  'Art & Craft Classes',
+  'Yoga Classes',
+  'Computer Lab',
+  'CCTV Camera Security',
+  'Spacious Playground',
+  'Extra Classes for weak students',
+  'Transportation Facilities',
 ];
 
 const testimonials = [
   {
-    name: 'Abhishek Gupta',
-    text: 'After spending 4 years in DPS Sursand, I can confidently say that school is perfect not only for academics but also for overall development.',
+    name: 'Parent of Class V Student',
+    text: 'Delhi Public School Suriya provides excellent education with a focus on overall development. The faculty is very supportive and knowledgeable.',
   },
   {
-    name: 'Pragati Gupta',
-    text: 'School is an excellent place for learning and development. Education is treated as worship here. All the faculties are extremely supportive and knowledgeable.',
+    name: 'Parent of Class III Student',
+    text: 'We are very happy with the school. The English environment and innovative teaching methods have helped our child excel in studies.',
   },
   {
-    name: 'Ashok Kushwaha',
-    text: 'My School is the best because here we get a number of opportunities to participate in different types of competitions.',
+    name: 'Parent of Class VII Student',
+    text: 'The school offers a perfect balance of academics and extracurricular activities. My child loves the dance and music classes.',
   },
 ];
 
@@ -91,7 +106,7 @@ const Index = () => {
           >
             <img
               src={heroSlides[currentSlide].image}
-              alt="DPS Sursand"
+              alt="Delhi Public School Suriya"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent" />
@@ -105,9 +120,9 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="max-w-2xl text-primary-foreground"
           >
-            <p className="text-secondary font-semibold tracking-wider uppercase mb-4">
-              Excellence in Education
-            </p>
+            <div className="inline-block bg-secondary text-secondary-foreground px-4 py-2 rounded-md font-semibold mb-4">
+              Admission Open 2026-27 | Play to IXth
+            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
               {heroSlides[currentSlide].title}
             </h1>
@@ -117,7 +132,7 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-secondary hover:bg-teal-dark text-secondary-foreground font-semibold">
                 <Link to="/admission">
-                  Apply Now
+                  Register Now
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </Button>
@@ -164,8 +179,8 @@ const Index = () => {
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-secondary text-secondary-foreground p-6 rounded-xl shadow-lg hidden md:block">
-                <div className="text-4xl font-display font-bold">20+</div>
-                <div className="text-sm">Years of Excellence</div>
+                <div className="text-4xl font-display font-bold">Estd</div>
+                <div className="text-xl font-bold">2025</div>
               </div>
             </motion.div>
 
@@ -177,13 +192,13 @@ const Index = () => {
             >
               <SectionHeading
                 subtitle="About Us"
-                title="Welcome to Delhi Public School Sursand"
+                title="Welcome to Delhi Public School Suriya"
               />
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Delhi Public School Sursand provides best education to children. Our purpose is to nurture the unique potential of every student entrusted in our care. We aim to offer a liberal and enlightened environment in education to keep pace with dynamic trends.
+                Delhi Public School Suriya is an English Medium School under the guideline of CBSE, established in 2025. Our purpose is to nurture the unique potential of every student entrusted in our care.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Our school is eco-friendly, pollution-free, well-built, and equipped with the latest artifacts. It lies in the heart of the city, making it accessible to all families in the region.
+                We provide a liberal and enlightened environment in education with experienced faculty, innovative teaching methods, and modern facilities to ensure holistic development of students.
               </p>
               <div className="flex flex-wrap gap-6 mb-8">
                 <div className="flex items-center gap-3">
@@ -191,8 +206,8 @@ const Index = () => {
                     <GraduationCap className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <div className="font-display font-bold text-foreground">1000+</div>
-                    <div className="text-sm text-muted-foreground">Students</div>
+                    <div className="font-display font-bold text-foreground">Play to IX</div>
+                    <div className="text-sm text-muted-foreground">Classes Offered</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -200,8 +215,8 @@ const Index = () => {
                     <Users className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <div className="font-display font-bold text-foreground">50+</div>
-                    <div className="text-sm text-muted-foreground">Teachers</div>
+                    <div className="font-display font-bold text-foreground">CBSE</div>
+                    <div className="text-sm text-muted-foreground">Affiliated</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -241,13 +256,13 @@ const Index = () => {
               className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-8 border border-primary-foreground/20"
             >
               <h3 className="font-display font-bold text-2xl text-primary-foreground mb-4">
-                Admission Enquiry
+                School Admission 2026-27
               </h3>
               <p className="text-primary-foreground/80 mb-6">
-                Submit the Enquiry Form and visit the school admissions office. Our counsellor will get back to you to answer your questions.
+                Admissions open for Play to Class IX. Register now to secure your child's future with quality CBSE education.
               </p>
               <Button asChild className="bg-secondary hover:bg-teal-dark text-secondary-foreground">
-                <Link to="/admission">Apply Now</Link>
+                <Link to="/admission">Register Now</Link>
               </Button>
             </motion.div>
             <motion.div
@@ -258,21 +273,48 @@ const Index = () => {
               className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-8 border border-primary-foreground/20"
             >
               <h3 className="font-display font-bold text-2xl text-primary-foreground mb-4">
-                School Admission
+                Contact Us
               </h3>
               <p className="text-primary-foreground/80 mb-6">
-                Parents need to fill the admission form and ensure all documents are in order. Kindly inform the school about any special assistance requirements.
+                For more details, contact us at +91 8292065084, 8292591939 or visit our school at Rajdhanwar Road, Suriya, Giridih.
               </p>
               <Button asChild className="bg-secondary hover:bg-teal-dark text-secondary-foreground">
-                <Link to="/admission">Learn More</Link>
+                <Link to="/contact">Get In Touch</Link>
               </Button>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Facilities Section */}
+      {/* Why Choose Us Section */}
       <section className="py-20 md:py-28 bg-muted/50">
+        <div className="container-custom">
+          <SectionHeading
+            subtitle="Why Choose Us"
+            title="Why to Choose Us?"
+            description="We offer a comprehensive learning environment with modern facilities and experienced faculty."
+            center
+          />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {whyChooseUs.map((item, index) => (
+              <motion.div
+                key={item}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="flex items-center gap-3 p-4 bg-card rounded-xl shadow-school border border-border/50"
+              >
+                <div className="w-3 h-3 rounded-full bg-secondary flex-shrink-0" />
+                <span className="text-foreground font-medium">{item}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Facilities Section */}
+      <section className="py-20 md:py-28">
         <div className="container-custom">
           <SectionHeading
             subtitle="Our Facilities"
@@ -295,12 +337,12 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-28 bg-muted/50">
         <div className="container-custom">
           <SectionHeading
             subtitle="Testimonials"
-            title="What Students Say"
-            description="Hear from our students about their experiences at Delhi Public School Sursand."
+            title="What Parents Say"
+            description="Hear from parents about their experience with Delhi Public School Suriya."
             center
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -329,7 +371,7 @@ const Index = () => {
               Ready to Join Our School?
             </h2>
             <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
-              Take the first step towards a brighter future. Apply for admission today and become part of the DPS Sursand family.
+              Take the first step towards a brighter future. Apply for admission for session 2026-27 and become part of the DPS Suriya family.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-primary hover:bg-navy-light text-primary-foreground">
