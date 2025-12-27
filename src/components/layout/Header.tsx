@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Mail, Facebook, Twitter, Instagram, Youtube, ChevronDown } from 'lucide-react';
+import { Menu, X, Phone, Mail, Facebook, Instagram, Youtube } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
@@ -31,34 +31,26 @@ const Header = () => {
       <div className="bg-primary text-primary-foreground py-2 text-sm">
         <div className="container-custom flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center gap-4 md:gap-6">
-            <a href="mailto:info@dpssursand.com" className="flex items-center gap-2 hover:text-secondary transition-colors">
+            <a href="mailto:dpssuriyanawadih@gmail.com" className="flex items-center gap-2 hover:text-secondary transition-colors">
               <Mail size={14} />
-              <span className="hidden sm:inline">info@dpssursand.com</span>
+              <span className="hidden sm:inline">dpssuriyanawadih@gmail.com</span>
             </a>
-            <a href="tel:+919801708060" className="flex items-center gap-2 hover:text-secondary transition-colors">
+            <a href="tel:+918292065084" className="flex items-center gap-2 hover:text-secondary transition-colors">
               <Phone size={14} />
-              <span>9801708060</span>
+              <span>8292065084, 8292591939</span>
             </a>
           </div>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3">
-              <a href="#" className="hover:text-secondary transition-colors" aria-label="Facebook">
+              <a href="https://facebook.com/dpssuriya.com" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors" aria-label="Facebook">
                 <Facebook size={16} />
               </a>
-              <a href="#" className="hover:text-secondary transition-colors" aria-label="Twitter">
-                <Twitter size={16} />
-              </a>
-              <a href="#" className="hover:text-secondary transition-colors" aria-label="Instagram">
+              <a href="https://instagram.com/d.p.s._suriya_8292" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors" aria-label="Instagram">
                 <Instagram size={16} />
               </a>
-              <a href="#" className="hover:text-secondary transition-colors" aria-label="YouTube">
+              <a href="https://youtube.com/@DelhiPublicSchoolSuriyaNawadih" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors" aria-label="YouTube">
                 <Youtube size={16} />
               </a>
-            </div>
-            <div className="hidden md:flex items-center gap-4 ml-4 border-l border-primary-foreground/30 pl-4">
-              <Link to="/login" className="hover:text-secondary transition-colors">Teacher Login</Link>
-              <span>/</span>
-              <Link to="/login" className="hover:text-secondary transition-colors">Student Login</Link>
             </div>
           </div>
         </div>
@@ -75,10 +67,10 @@ const Header = () => {
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-lg md:text-xl font-display font-bold text-primary leading-tight">
-                  DELHI PUBLIC SCHOOL SURSAND
+                  DELHI PUBLIC SCHOOL SURIYA
                 </h1>
                 <p className="text-xs text-muted-foreground">
-                  (Under The AEGIS of DPS Educational Society, New Delhi)
+                  An English Medium School Under the Guideline of CBSE
                 </p>
               </div>
             </Link>
@@ -141,10 +133,6 @@ const Header = () => {
                     </Link>
                   </motion.div>
                 ))}
-                <div className="flex gap-4 mt-4 pt-4 border-t border-border">
-                  <Link to="/login" className="text-sm text-muted-foreground hover:text-secondary">Teacher Login</Link>
-                  <Link to="/login" className="text-sm text-muted-foreground hover:text-secondary">Student Login</Link>
-                </div>
               </div>
             </motion.div>
           )}
