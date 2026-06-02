@@ -111,11 +111,10 @@ const Footer = () => {
       <div className="border-t border-primary-foreground/10">
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-80">
+            <p className="text-sm opacity-80">
+              Crafted with care for India's growing schools by <a href="https://softglimmer.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-secondary transition-colors">Softglimmer Services</a>
+            </p>
             <p>© 2025 Delhi Public School Suriya. All Rights Reserved.</p>
-            <div className="flex gap-6">
-              <Link to="/privacy" className="hover:text-secondary transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="hover:text-secondary transition-colors">Terms of Use</Link>
-            </div>
           </div>
         </div>
       </div>
